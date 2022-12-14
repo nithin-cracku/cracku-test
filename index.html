@@ -523,7 +523,6 @@
           </div>
         </div>
         <div class="variable-width">
-          <ul>
           <li class="video-tile cat mock">
             <div class="ibox">
                 <a href="/cat-mock-test" >
@@ -1120,7 +1119,7 @@
                 </a>
             </div>
           </li>
-        </ul>
+     
         </div>
 
     
@@ -1496,7 +1495,20 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 
+<script>
+  $(()=>{
+    $('.ibox').each((index,ele) => {
+      let $ele = $(ele);
+      let heading = $ele.find('.product-imitation>p').text();
+      $ele.find('a').attr('aria-label',heading);
+    });
+    $('.ms-footbar-social>a').each((index,ele)=>{
+      $(ele).attr('aria-label',ele.id);
+      console.log(ele.id)
+    });
+  })
 
+</script>
 
 
   <!-- #popupForm -->
